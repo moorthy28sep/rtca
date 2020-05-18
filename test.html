@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.post("scripts/senddata",
+    {
+      name: "Duck",
+      city: "Duckburg"
+    },
+    function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<!-- <button>Send an HTTP POST request to a page and get the result back</button>
+
+<div class="section--md bg--lightest-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <span class="icon icon--info icon--left icon--sm" data-grunticon-embed></span>          
+          Contact details for an <strong>Advance Care Document Custodian <i>are not</i></strong> available on this record.
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<html lang="en" class="gr__localhost">
+   <head>
+      <meta charset="utf-8">      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#000000">
+      <meta name="description" content="Web site created using create-react-app">
+      <link rel="apple-touch-icon" href="logo192.png">
+      <title>Real Time Claims Adjudication Using Blockchain</title>
+      <link href="css/styles.css" rel="stylesheet"  />
+      <link href="css/jquery.modal.min.css" rel="stylesheet"  />
+      <script type="text/javascript" src="scripts/jquery.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery.modal.min.js"></script>
+	  <script type="text/javascript" src="scripts/scripts.js"></script>
+   </head>
+   <body>
+      <div id="root" class="dashboard">
+         <div class="container">
+            <div class="App">
+               <img src="images/claims.png" class="App-logo" alt="logo">
+               <h1>Real Time Claims Adjudication Using Blockchain</h1>
+			   <p class="welcomeTxt">Welcome <span class="userName">James.Doe</span>[Insurer], <a href="#">Log Out</a></p>
+               <div class="makeStyles-root-1">
+                  <nav>
+                     <ul>
+                        <li><a href="index.html">Home</a></li>
+						<li><a class="active" href="dashboard.html">Dashboard</a></li>
+                        <li><a href="submit-claim.html">Submit Claim</a></li> 
+                        
+                        <li><a href="insurer-approved-claims.html">Approved Claims</a></li>
+                        <li><a href="insurer-rejected-claims.html">Rejected Claims</a></li>
+                        <li><a href="disputes-appeals.html">Disputes/Appeals</a></li>
+                        <li><a href="help.html">Help</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="content">
+                  <div xs="12" class="row">
+					<h2>Dashboard</h2>
+                     
+                  </div>
+                  <div xs="12" class="row">
+				  <div class="leftPanel">
+                        <h2>Approved Claims</h2>
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0" class="btmTble approvedTbl" id="approvedClaims"></table>
+					 <a href="insurer-approved-claims.html" class="txtAlignRight">View more...</a>
+                     </div>
+					 <div class="rightPanel">
+					 <h2>Rejected Claims</h2>
+                     <table border="1" width="100%" cellspacing="0" cellpadding="0" class="btmTble rejectTbl" id="rejectedClaims"></table>
+                    
+                    <a href="insurer-rejected-claims.html" class="txtAlignRight">View more...</a>
+
+
+                     
+                  </div>
+               </div>
+			    <div xs="12" class="row">
+				<div class="rightPanel fullWidth">
+				<h2>Submitted Claims</h2>
+					<table border="1" width="100%" cellspacing="0" cellpadding="0" class="btmTble approvedTbl" id="submittedClaims">					
+
+					 </table>
+					 <a href="insurer-submit-claims.html" class="txtAlignRight">View more...</a>
+                </div>
+                </div>
+            </div>
+         </div>
+		 </div>
+		 <div class="modal" id="approve-1" style="display:none;">
+                           
+                           <div class="popupTitle">Submit Claim</div>
+                           <div class="popupBody">                    
+								<p>Claim approved or rejected by Insurer</p>						   
+								<p>Claim No : <strong id="cIdValue"></strong></p>																													
+                           </div>
+						   <div class="btncenter">							     
+								 <a href="#" class="btn" id="approveClaim">Approve Claim</a>	
+								<a href="#" class="btn" id="rejectClaim">Reject Claim</a>									 
+                           </div>
+						   </div>
+<div class="modal" id="approve-2" style="display:none;">
+                           
+                           <div class="popupTitle">Reject Claim</div>
+                           <div class="popupBody">                      
+								<p>Claim rejected by Insurer</p>						   
+								<p>Claim No : <strong id="rejectedcIdValue"></strong></p>															
+																
+                           </div>
+						   <div class="btncenter">							     
+								 <a href="#" id="" class="btn" id="disputeReject">Dispute</a>	
+								<a href="#" id="" class="btn" id="submitChangesReject">Submit Changes</a>									 
+                           </div>
+						   </div>
+<div class="modal" id="approve-3" style="display:none;">
+                           
+                           <div class="popupTitle">Approve Claim</div>
+                           <div class="popupBody">                  
+								<p>Claim approved by Insurer</p>						   
+								<p>Claim No : <strong id="approvedcIdValue"></strong></p>
+								
+								
+																
+                           </div>
+						   <div class="btncenter">							     
+								 <a href="#" id="" class="btn" id="disputeApprove">Dispute</a>	
+								<a href="#" id="" class="btn" id="submitChangesApprove">Submit Changes</a>									 
+                           </div>
+						   </div>	
+<div class="modal" id="success" style="display:none;">
+                           
+                           <div class="popupTitle">Success</div>
+                           <div class="popupBody">                  
+								<p>Claim submitted or approved or rejected Successfully.</p>
+                           </div>
+						   <div class="btncenter">							     
+								 <a href="#" class="btn" id="confirmSuccess">OK</a>								 
+                           </div>
+						   </div>							   
+         <footer>
+            <p>Real Time Claims Adjudication Using Blockchain, Copyright © 2019 </p>
+         </footer>
+      </div>
+	  <script type="text/javascript" src="scripts/dashboard.js"></script>
+	 
+   </body>
+</html>

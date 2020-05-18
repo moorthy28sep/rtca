@@ -1,0 +1,246 @@
+<html lang="en" class="gr__localhost">
+   <head>
+      <meta charset="utf-8">      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#000000">
+      <meta name="description" content="Web site created using create-react-app">
+      <link rel="apple-touch-icon" href="logo192.png">
+      <title>Real Time Claims Adjudication Using Blockchain</title>
+      <link href="css/styles.css" rel="stylesheet"  />
+	  <link href="css/validation.css" rel="stylesheet"  />
+      <link href="css/jquery.modal.min.css" rel="stylesheet"  />
+      <script type="text/javascript" src="scripts/jquery.min.js"></script>
+	  <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery.modal.min.js"></script>
+	  <script type="text/javascript" src="scripts/scripts.js"></script>	  	  	 
+   </head>
+   <body>
+      <div id="root">
+         <div class="container">
+            <div class="App">
+               <img src="images/claims.png" class="App-logo" alt="logo">
+               <h1>Real Time Claims Adjudication Using Blockchain</h1>
+			   <p class="welcomeTxt">Welcome <span class="userName">James.Doe</span>[Insurer], <a href="#">Log Out</a></p>
+               <div class="makeStyles-root-1">
+                  <nav>
+                     <ul>
+                        <li><a href="index.html">Home</a></li>
+						<li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a class="active" href="submit-claim.html">Submit Claim</a></li>                                                
+                        <li><a href="insurer-approved-claims.html">Approved Claims</a></li>
+                        <li><a href="insurer-rejected-claims.html">Rejected Claims</a></li>
+                        <li><a href="disputes-appeals.html">Disputes/Appeals</a></li>
+                        <li><a href="help.html">Help</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="content">
+                  <div xs="12" class="row">
+                     <h2>Submit Claim</h2>
+					 <div id="result"></div>
+					 <form id="fileUploadForm" action="" method="post">
+					 <div class="leftPanel">
+                        <table border="0" width="100%" cellspacing="0" cellpadding="8">
+                           <tr>
+						   
+                              <td class="labelKey1" with="45%">Patient Name</td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1" with="45%"><input type="text" class="inputTxt" value="Jane Doe" name="patientName" id="patientName" /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">Gender</td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="radio" name="gender" value="Male" />Male <input type="radio" checked name="gender" value="Female" />Female</td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">DOB   </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="date" name="dob" class="inputTxt" id="dob" value="1966-03-09" placeholder="YYYY/MM/DD" /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">Patient’s Address     </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="text" class="inputTxt" name="address" value="123 Main Street" /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">City   </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="text" class="inputTxt" name="city" value="Anytown" /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">State   </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="text" class="inputTxt" name="state" value="South Carolina" /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">Telephone    </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="text" class="inputTxt" name="telephone" value="864123123" /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">Zip code                 </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="text" name="zipcode" class="inputTxt" value="29631" /></td>
+							  <td class="status"></td>
+                           </tr>
+                        </table>
+                        
+                     </div>
+					 <div class="rightPanel">
+                        <table border="0" width="100%" cellspacing="0" cellpadding="8">
+							<tr>
+                              <td class="labelKey1">Member ID          </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="text" name="memberId" class="inputTxt" value="23400040001" /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">Plan name          </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1">
+							  <select name="planName" class="inputTxt" id="planName">
+							  <option value="">Please select</option>
+							  <option value="ABC Insurance">ABC Insurance</option>
+							  <option value="KPS Insurance">KPS Insurance</option>
+							  <option value="Oscar">Oscar </option>
+							  <option value="BSBS">BSBS</option>
+							  <option value="BCBC">BCBC</option>
+							  </select>
+							  </td>
+                           </tr>
+						   <tr>
+                              <td class="labelKey1">Payer         </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1">
+							  <select name="payer" id="payer" class="inputTxt">
+								<option value="">Please select</option>
+								<option value="BCBC of South Carolina">BCBC of South Carolina</option>
+								<option value="BS of North Dakota">BS of North Dakota</option>
+								<option value="Oscar">Oscar</option>
+								<option value="AB Insurance">AB Insurance</option>
+								<option value="Star Health Insurance">Star Health Insurance</option>
+							  </select>
+								
+							  </td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">Member Benefit Coverage       </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="text" class="inputTxt" name="memberbenefitCoverage" value="PPO" /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">Diagnosis (ICD)                           </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="text" class="inputTxt" name="diagnosis" value="449.1" /> </td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">Referring Provider    </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="text" class="inputTxt" name="referringProvider" value="Dr. David Blake " /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1">Pre Authorization Number       </td>
+                              <td class="tblSep">:</td>
+                              <td class="labelValue1"><input type="number" class="inputTxt" name="preAuthNumber" value="1234567892" /></td>
+							  <td class="status"></td>
+                           </tr>
+                           <tr>
+                              <td class="labelKey1"> &nbsp;</td>
+                              <td class="tblSep">&nbsp;</td>
+                              <td class="labelValue1">&nbsp;</td>
+							  <td class="status"></td>
+                           </tr>
+                          
+                        </table>
+                        
+                     </div>
+                     <table border="0" width="100%" cellspacing="0" cellpadding="8" class="btmTble">
+                        <tr>
+                           <th colspan="2" width="20%">Date of Service</th>
+                           <th width="15%">Place of Service</th>
+                           <th width="15%">Emergency</th>
+                           <th colspan="2" width="20%">Procedures/Services/Supplies</th>
+                           <th width="10%">Charges</th>
+                           <th width="20%">Rendering Provider NPI</th>
+                        </tr>
+                        <tr>
+                           <th>From</th>
+                           <th>To</th>
+                           <th></th>
+                           <th></th>
+                           <th>CPT/HPCS</th>
+                           <th>Modifier</th>
+                           <th></th>
+                           <th></th>
+                        </tr>
+                       
+                        <tr class="even">
+                           <td><input type="date" name="from" id="from" value="" /></td>
+                           <td><input type="date" name="to" id="to" value="" /></td>
+						   <td><input type="number" name="placeOfService" id="placeOfService" value="" /></td>
+						   <td><input type="text" name="emergency" id="emergency" value="" /></td>
+						   <td><input type="text" name="cpt_hpcs" id="cpt_hpcs" value="" /></td>
+						   <td><input type="number" name="modifier" id="modifier" value="" /></td>
+						   <td><input type="number" name="charges" id="charges" value="" /></td>
+						   <td><input type="number" name="npi" id="npi" value="" /></td>
+                        </tr>
+                        
+                     </table>
+					 <div class="btncenter"><input type="submit" class="btn" id="submitClaim" value= "Submit Claim" /></div> 
+                     <!-- <div class="btncenter"><a class="btn" id="submitClaim" href="#ex5" rel="modal:open" >Submit Claim</a></div> -->
+					 <div class="modal" id="ex5" style="display:none;">
+                           <div class="popupTitle">Submit Claim</div>
+                           <div class="popupBody">
+                              <p class="center">Claim No : <strong>692973</strong></p>
+                              <p class="center">Are you sure you want to Submit claim?</p>
+                           </div>
+                           <div class="btncenter"><a href="#ex2-4" id="confirmReject2" class="btn" rel="modal:open">Yes</a>
+                              <a href="#ex2-3" class="btn" rel="modal:close">No</a>
+                           </div>
+                        </div>
+                        <div class="modal" id="ex2-4" style="display:none;">
+                           <p>
+                           <div class="popupTitle">Submit Claim</div>
+                           <div class="popupBody">
+                              <p>Claim No : <strong>692973</strong> Submitted.</p>
+                           </div>
+						   <div class="btncenter">							  
+                              <a href="#" class="btn" id="btn-Submit" rel="modal:close">Ok</a>
+                           </div>
+                        </div>
+					 <div class="floatLeft"><a class="btn" id="" href="dashboard.html">< Dashboard</a></div>
+					 <div class="floatRight"><a class="btn" id="" href="next-claim.html">Next Claim</a></div>
+					 </form>
+                  </div>
+                 
+				  
+               </div>
+            </div>
+         </div>
+		 <div class="modal" id="success" style="display:none;">
+                           
+                           <div class="popupTitle">Success</div>
+                           <div class="popupBody">                  
+								<p>Claim submitted Successfully.</p>
+                           </div>
+						   <div class="btncenter">							     
+								 <a href="#" class="btn" id="confirmSuccess">OK</a>								 
+                           </div>
+						   </div>
+         <footer>
+            <p>Real Time Claims Adjudication Using Blockchain, Copyright © 2019 </p>
+         </footer>
+      </div>
+   </body>
+</html>

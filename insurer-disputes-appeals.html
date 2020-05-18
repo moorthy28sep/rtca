@@ -1,0 +1,185 @@
+<html lang="en" class="gr__localhost">
+   <head>
+      <meta charset="utf-8">      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#000000">
+      <meta name="description" content="Web site created using create-react-app">
+      <link rel="apple-touch-icon" href="logo192.png">
+      <title>Real Time Claims Adjudication Using Blockchain</title>
+      <link href="css/styles.css" rel="stylesheet"  />
+      <link href="css/jquery.modal.min.css" rel="stylesheet"  />
+      <script type="text/javascript" src="scripts/jquery.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery.modal.min.js"></script>
+	  <script type="text/javascript" src="scripts/scripts.js"></script>
+   </head>
+   <body>
+      <div id="root">
+         <div class="container">
+            <div class="App">
+               <img src="images/claims.png" class="App-logo" alt="logo">
+               <h1>Real Time Claims Adjudication Using Blockchain</h1>
+			   <p class="welcomeTxt">Welcome Stephen[Insurer], <a href="#">Log Out</a></p>
+               <div class="makeStyles-root-1">
+                  <nav>
+                     <ul>
+                        
+						<li><a href="index.html">Home</a></li>
+                        <li><a href="review-claim.html">Review Claim</a></li>
+                        
+                        <li><a href="insurer-unreviewed-claims.html">Unreviewed Claims</a></li>
+                        <li><a href="insurer-approved-claims.html">Approved Claims</a></li>
+                        <li><a href="insurer-rejected-claims.html">Rejected Claims</a></li>
+                        <li><a class="active" href="insurer-disputes-appeals.html">Disputes/Appeals</a></li>
+                        <li><a href="help.html">Help</a></li>
+						
+						
+                     </ul>
+                  </nav>
+               </div>
+               <div class="content">
+                  <div xs="12" class="row">
+                     <h2>Insurer Dispute Resolution Request</h2>
+					 
+					 
+					 <table border="1" width="100%" cellspacing="0" cellpadding="0" class="btmTble rejectTbl approvedTbl">
+                        <tr>                           
+                           <th width="25%">Claim No</th>
+                           <th width="25%">Hash No</th>                           
+                           <th width="25%">Status</th>
+                           <th width="25%">Action</th>
+                        </tr>                        
+                        <tr class="odd">
+                           <td>234523534</td>
+                           <td>234245</td>
+                           <td>Approved</td>
+                           <td>
+							<a href="#approve-1" id="confirmApproval" class="btn" rel="modal:open">Action</a>
+							<div class="modal modalBig" id="approve-1" style="display:none;">
+                           
+                           <div class="popupTitle">Approved Claim</div>
+                           <div class="popupBody">                              
+								<table cellpadding="5" cellspacing="5" border="0">
+					 <tr>
+						<td>Provider NPI:</td>
+						<td><input class="inputTxt" maxlength="10" name="Provider NPI" size="10" type="text"/></td>
+						<td>Provider Tax ID:</td>
+						<td><input class="inputTxt" maxlength="10" name="Provide Tax ID" maxlength="10" name="" size="10" size="10" type="text"/></td>
+						<td>Provider Name:</td>
+						<td><input class="inputTxt" maxlength="10" name="Provider Name" size="10" type="text"/></td>
+					 </tr>
+					 <tr>
+						<td>Provider Address:</td>
+						<td><input class="inputTxt" name="Provider Address" type="text"/></td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					 </tr>
+					 <tr>
+					 <td colspan="6">Provider Type :</td>
+					 </tr>
+					 <tr>
+					 <td colspan="6"><input name="ProviderType" id="RB" type="RADIO" value="MD" /><span id="PT">MD</span>
+<input name="ProviderType" id="RB" type="RADIO" value="Mental Health Professional" /><span id="PT">Mental Health Professional</span>
+<input name="ProviderType" id="RB" type="RADIO" value="Mental Health Institutional" /><span id="PT">Mental Health Institutional</span>
+<input name="ProviderType" id="RB" type="RADIO" value="Hospital" /><span id="PT">Hospital</span>
+<input name="ProviderType" id="RB" type="RADIO" value="ASC" /><span id="PT">ASC</span>
+<input name="ProviderType" id="RB" type="RADIO" value="SNF" /><span id="PT">SNF</span>
+<input name="ProviderType" id="RB" type="RADIO" value="DME" /><span id="PT">DME</span>
+<input name="ProviderType" id="RB" type="RADIO" value="Rehab" /><span id="PT">Rehab</span>
+<input name="ProviderType" id="RB" type="RADIO" value="HomeHealth" /><span id="PT">Home Health</span>
+<input name="ProviderType" id="RB" type="RADIO" value="Ambulance" /><span id="PT">Ambulance</span></td>
+					 </tr>
+					 <tr>
+					 <td>Others (please specify type) :</td>
+					 <td><input type="Text"/></td>
+					 <td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					 </tr>
+					 <tr>
+					 <td colspan="6">Claim Information :</td>
+					 </tr>
+					 <tr>
+					 <td colspan="6"><input name="ClaimInfo" id="RB" type="RADIO" class="inputTxt" value="SingleClaim" /><span id="CI">Single</span>
+<input name="ClaimInfo" id="RB" type="RADIO" class="inputTxt" value="MultipleClaim" /><span id="CI">Multiple "LIKE" Claim</span>
+</td>
+					 </tr>
+					 <tr>
+						<td>Number of claims:</td>
+						<td><input class="inputTxt" name="Provider Address" type="text"/></td>
+						<td>Patient Name:</td>
+						<td><input class="inputTxt" name="Provider Address" type="text"/></td>
+						<td>DOB:</td>
+						<td><input name="DOB" class="inputTxt" type="Date"/></td>
+					 </tr>
+					 <tr>
+						<td>Plan ID No:</td>
+						<td><input class="inputTxt" name="Provider Address" type="text"/></td>
+						<td>Patient Account No:</td>
+						<td><input class="inputTxt" name="Provider Address" type="text"/></td>
+						<td>Original Claim ID:</td>
+						<td><input name="OriginalClaimID" class="inputTxt" size="13"type="text"/></td>
+					 </tr>
+					 <tr>
+						<td>Service Date-From:</td>
+						<td><input class="inputTxt" name="Provider Address" type="Date"/></td>
+						<td>To:</td>
+						<td><input class="inputTxt" name="Provider Address" type="Date"/></td>
+						<td>Original Claim Amount Billed:</td>
+						<td><input name="OriginalClaimID" class="inputTxt" size="13"type="text"/></td>
+					 </tr>
+					 <tr>
+					 <td colspan="6"><span id="DT">Dispute Type:</span><input name="DisputeType" type="radio" class="inputTxt" value="Claim"/><span id="DT">Claim:</span>
+<input name="DisputeType"  type="radio" value="AppealofMedicalNeccessity" class="inputTxt"/><span id="DT">Appeal of Medical Neccessity</span></td>
+					 </tr>
+					 <tr>
+					 <td colspan="6"><input id="RB" name="DisputeType" type="radio" value="DisputingRequestForReimbursementOfOverpayment" class="inputTxt"/><span id="DT">Disputing Request For Reimbursement of Overpayment</span>
+<input id="RB" name="DisputeType" type="radio" value="ContractDispute" class="inputTxt"/><span id="DT">Contract Dispute</span></td>
+					 </tr>
+					 <tr>
+					 <td colspan="6"><input id="RB" name="DisputeType" type="radio" value="SeekingResolutionOfBillingDetermination" class="inputTxt"/><span id="DT">Seeking Resolution of Billing Determination</span>
+<span id="DT" style="margin-left:90px;">Other<span><input name="Other" type="text" class="inputTxt" size="5"></td>
+					 </tr>
+					 
+					 <tr>
+					 <td>Description Of Dispute :</td>
+					 <td><textarea id="comment" name="DescriptionOfDispute" style="resize:none;" rows="4" cols="30" class="inputTxt"></textarea></td>
+					 <td>Date</td>
+						<td><input value="date" class="inputTxt" name="date" type="date"></td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					 </tr>
+					 </table>
+                    
+                    
+
+<div class="btncenter"><a class="btn" id="rejectClaim" href="#">Submit</a></div>
+																
+                           </div>
+						   </div>
+						   
+							
+						   
+						   
+						   </td>                           
+                        </tr>
+                        
+						
+                     </table>
+					 
+					 
+
+
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+         <footer>
+            <p>Real Time Claims Adjudication Using Blockchain, Copyright © 2019 </p>
+         </footer>
+      </div>
+   </body>
+</html>

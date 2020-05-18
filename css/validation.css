@@ -1,0 +1,200 @@
+
+
+img {
+	border: 0
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.3em;
+	margin: 1.2em 0
+}
+
+li>p {
+	margin-top: .2em
+}
+
+pre {
+	font-family: monospace;
+	font-size: 1em
+}
+
+strong,
+b {
+	font-weight: 700
+}
+
+#content {
+	margin: 0 auto;
+	width: 765px;
+	padding: 10px 0;
+	text-align: left
+}
+
+.content {
+	margin-left: 4.5em;
+	margin-right: 4.5em
+}
+
+.content ol,
+.content ul,
+.content li {
+	font-size: 1em;
+	line-height: 1.3em;
+	margin: .2em 0 .1em 1.5em
+}
+
+.content ol.terms li {
+	margin-bottom: 1em
+}
+
+#header {
+	padding-bottom: 10em
+}
+
+#headerlogo {
+	float: left
+}
+
+#headerlogo img {
+	width: 188px;
+	height: 83px
+}
+
+#headernav {
+	float: right
+}
+
+label {
+	font-weight: 700
+}
+
+#reminders label {
+	font-weight: 400
+}
+
+table.tabbedtable {
+	padding-left: 3em
+}
+
+table.tabbedtable td {
+	padding-bottom: 5px
+}
+
+table.tabbedtable label {
+	text-align: right;
+	padding-right: 9px
+}
+
+.hiddenlabel {
+	visibility: hidden
+}
+
+.largelink {
+	border: 1px solid #cacaca;
+	padding: 10px;
+	background-color: #e8eef7;
+	font-size: 1.2em;
+	font-weight: 700
+}
+
+.largelinkwrap {
+	padding-top: 10px;
+	padding-bottom: 10px
+}
+
+
+
+#fileUploadForm table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	empty-cells: show
+}
+
+#fileUploadForm .label {
+	padding-top: 2px;
+	padding-right: 8px;
+	vertical-align: top;
+	text-align: right;
+	width: 125px;
+	white-space: nowrap
+}
+
+#fileUploadForm .field {
+	padding-bottom: 10px;
+	white-space: nowrap
+}
+
+#fileUploadForm .status {
+	width: 246px;
+	white-space: nowrap
+}
+
+#fileUploadForm .textfield {
+	width: 150px
+}
+
+#fileUploadForm label.error {
+	background: url(../images/unchecked.gif) no-repeat 0 0;
+	padding-left: 16px;
+	padding-bottom: 2px;
+	font-weight: 700;
+	color: #ea5200
+}
+
+#fileUploadForm label.checked {
+	background: url(../images/checked.gif) no-repeat 0 0
+}
+
+#fileUploadForm .success_msg {
+	font-weight: 700;
+	color: #0060bf;
+	margin-left: 19px
+}
+
+#fileUploadForm #dateformatStatus,
+#fileUploadForm #termsStatus {
+	margin-left: 6px
+}
+
+#fileUploadForm #dateformat_eu {
+	vertical-align: middle
+}
+
+#fileUploadForm #ldateformat_eu {
+	font-weight: 400;
+	vertical-align: middle
+}
+
+#fileUploadForm #dateformat_am {
+	vertical-align: middle
+}
+
+#fileUploadForm #ldateformat_am {
+	font-weight: 400;
+	vertical-align: middle
+}
+
+#fileUploadForm #termswrap {
+	float: left
+}
+
+#fileUploadForm #terms {
+	vertical-align: middle;
+	float: left;
+	display: block;
+	margin-right: 5px
+}
+
+#fileUploadForm #lterms {
+	font-weight: 400;
+	vertical-align: middle;
+	float: left;
+	display: block;
+	width: 350px;
+	white-space: normal
+}
+
+#fileUploadForm #lsignupsubmit {
+	visibility: hidden
+}
