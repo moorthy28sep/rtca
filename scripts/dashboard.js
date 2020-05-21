@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$('#approveClaim').on('click',function(){	
 			
 		
-			$.get('https://3a696f95.ngrok.io/api/SubmitApplication',function(data){
+			$.get('https://61e16d1c.ngrok.io/api/SubmitApplication',function(data){
 			
 				$(data).filter(function (i,n){
 					if( n.claimId === $("#cIdValue").text()) {
@@ -24,7 +24,7 @@ $(document).ready(function(){
 						var myApprovedClaim = JSON.stringify(myArray);			
 						console.log(myApprovedClaim);
 							$.ajax({
-								url: "https://3a696f95.ngrok.io/api/ApproveApplication",								
+								url: "https://61e16d1c.ngrok.io/api/ApproveApplication",								
 								type: "POST",
 								dataType: "json",
 								contentType: "application/json",
@@ -87,7 +87,7 @@ $(document).ready(function(){
 		
 		$('#rejectClaim').on('click',function(){	
 		
-			$.get('https://3a696f95.ngrok.io/api/SubmitApplication',function(data){
+			$.get('https://61e16d1c.ngrok.io/api/SubmitApplication',function(data){
 			
 				$(data).filter(function (i,n){
 					if( n.claimId === $("#cIdValue").text()) {
@@ -98,7 +98,7 @@ $(document).ready(function(){
 						var myApprovedClaim = JSON.stringify(myArray);			
 						console.log(myApprovedClaim);
 							$.ajax({
-								url: "https://3a696f95.ngrok.io/api/RejectApplication",								
+								url: "https://61e16d1c.ngrok.io/api/RejectApplication",								
 								type: "POST",
 								dataType: "json",
 								contentType: "application/json",
