@@ -137,7 +137,7 @@ var date = new Date($('#to').val());
 			//console.log(jsonString);
 			
 			$.ajax({
-				  url: "https://61e16d1c.ngrok.io/api/SubmitApplication",				  
+				  url: "http://13.234.114.251:3000/api/SubmitApplication",				  
 				//url: 'scripts/data.json',
 				  type: "POST",
 				  dataType: "json",
@@ -228,8 +228,8 @@ $.ajax({
 
 
 /* Dashboard starts */
-
-$.get('https://61e16d1c.ngrok.io/api/ApproveApplication',function(data){
+//$.get('scripts/data.json',function(data){
+$.get('http://13.234.114.251:3000/api/ApproveApplication',function(data){
 console.log(data);
 var thead = "<thead><tr><th width='25%'>TransactionId ID</th><th width='20%'>Claim ID</th><th width='20%'>Patient Name</th><th width='18%'>Plan Name</th><th width='15%'>Actions</th></tr></thead>";
 var output = '<tbody>';  
@@ -243,7 +243,7 @@ output += '</tbody>';
 $('#approvedClaims').html(thead + output);
 });
 
-$.get('https://61e16d1c.ngrok.io/api/RejectApplication',function(data){
+$.get('http://13.234.114.251:3000/api/RejectApplication',function(data){
 console.log(data);
 var thead = "<thead><tr><th width='25%'>TransactionId ID</th><th width='20%'>Claim ID</th><th width='20%'>Patient Name</th><th width='20%'>Plan Name</th><th width='20%'>Actions</th></tr></thead>";
 var output = '<tbody>';  
@@ -256,7 +256,7 @@ $('#rejectedClaims').html(thead + output);
 
 
 
-$.get('https://61e16d1c.ngrok.io/api/SubmitApplication',function(data){
+$.get('http://13.234.114.251:3000/api/SubmitApplication',function(data){
 	var result = [];
 	function comp(a, b) {
     return new Date(a.result.claimDetails.claimSubmissionDate).getTime() - new Date(b.result.claimDetails.claimSubmissionDate).getTime();
@@ -322,7 +322,7 @@ $('#submittedClaims').html(thead + output);
 		
 		
 		
-$.get('https://61e16d1c.ngrok.io/api/ApproveApplication',function(data){
+$.get('http://13.234.114.251:3000/api/ApproveApplication',function(data){
 console.log(data);
 var output = '<tbody>';  
 $.each(data, function(key,val){
@@ -334,7 +334,7 @@ $('#providerDetailsLeft').html(output);
 
 
 
-$.get('https://61e16d1c.ngrok.io/api/RejectApplication',function(data){
+$.get('http://13.234.114.251:3000/api/RejectApplication',function(data){
 console.log(data);
 var output = '<tbody>';  
 $.each(data, function(key,val){
@@ -346,7 +346,7 @@ $('#providerDetailsRight').html(output);
 
 
 
-$.get('https://61e16d1c.ngrok.io/api/SubmitApplication',function(data){
+$.get('http://13.234.114.251:3000/api/SubmitApplication',function(data){
 console.log(data);
 var output = '<ul>';  
 $.each(data, function(key,val){

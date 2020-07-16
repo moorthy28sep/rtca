@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$('#approveClaim').on('click',function(){	
 			
 		
-			$.get('https://61e16d1c.ngrok.io/api/SubmitApplication',function(data){
+			$.get('http://13.234.114.251:3000/api/SubmitApplication',function(data){
 			
 				$(data).filter(function (i,n){
 					if( n.claimId === $("#cIdValue").text()) {
@@ -24,7 +24,7 @@ $(document).ready(function(){
 						var myApprovedClaim = JSON.stringify(myArray);			
 						console.log(myApprovedClaim);
 							$.ajax({
-								url: "https://61e16d1c.ngrok.io/api/ApproveApplication",								
+								url: "http://13.234.114.251:3000/api/ApproveApplication",								
 								type: "POST",
 								dataType: "json",
 								contentType: "application/json",
@@ -87,7 +87,7 @@ $(document).ready(function(){
 		
 		$('#rejectClaim').on('click',function(){	
 		
-			$.get('https://61e16d1c.ngrok.io/api/SubmitApplication',function(data){
+			$.get('http://13.234.114.251:3000/api/SubmitApplication',function(data){
 			
 				$(data).filter(function (i,n){
 					if( n.claimId === $("#cIdValue").text()) {
@@ -98,14 +98,14 @@ $(document).ready(function(){
 						var myApprovedClaim = JSON.stringify(myArray);			
 						console.log(myApprovedClaim);
 							$.ajax({
-								url: "https://61e16d1c.ngrok.io/api/RejectApplication",								
+								url: "http://13.234.114.251:3000/api/RejectApplication",								
 								type: "POST",
 								dataType: "json",
 								contentType: "application/json",
 								data: myApprovedClaim,   
 							success: function(data, textStatus, jqXHR)  {								
 								$.modal.close();
-								$('#success').modal();								
+								$('#successRejected').modal();								
 								//alert("Claim Rejected Successfully");
 								$(document).on('click','#confirmSuccess',function(){									
 									location.reload(true);	
@@ -151,7 +151,7 @@ $(document).ready(function(){
 							},
 							error: function(data, textStatus, jqXHR)  {								
 								$.modal.close();
-								$('#success').modal();								
+								$('#successRejected').modal();								
 								//alert("Claim Rejected Successfully");
 								$(document).on('click','#confirmSuccess',function(){									
 									location.reload(true);	
